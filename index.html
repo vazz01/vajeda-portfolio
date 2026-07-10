@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#020617" />
+
+  <!-- Primary Meta Tags -->
+  <title>Vajeda Multani | Full Stack PHP &amp; WordPress Developer</title>
+  <meta name="title" content="Vajeda Multani | Full Stack PHP &amp; WordPress Developer" />
+  <meta name="description" content="Vajeda Multani is a Full Stack Web Developer with 3+ years of experience in PHP, WordPress, CodeIgniter, and custom web application development." />
+  <meta name="author" content="Vajeda Multani" />
+  <meta name="keywords" content="Vajeda Multani, PHP Developer, WordPress Developer, CodeIgniter, Full Stack Developer, WooCommerce, Web Developer Portfolio" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vazz01.github.io/vajeda-portfolio/" />
+  <meta property="og:title" content="Vajeda Multani | Full Stack PHP &amp; WordPress Developer" />
+  <meta property="og:description" content="Full Stack Web Developer specializing in PHP, WordPress, CodeIgniter and custom web applications." />
+  <meta property="og:image" content="https://vazz01.github.io/vajeda-portfolio/assets/images/og-image.svg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vajeda Multani | Full Stack PHP &amp; WordPress Developer" />
+  <meta name="twitter:description" content="Full Stack Web Developer specializing in PHP, WordPress, CodeIgniter and custom web applications." />
+  <meta name="twitter:image" content="https://vazz01.github.io/vajeda-portfolio/assets/images/og-image.svg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/favicon/favicon.svg" />
+
+  <!-- Preconnect + Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vajeda Multani",
+    "url": "https://vazz01.github.io/vajeda-portfolio/",
+    "jobTitle": "Full Stack PHP & WordPress Developer",
+    "description": "Full Stack Web Developer with 3+ years of experience in PHP, WordPress, CodeIgniter, and custom web application development.",
+    "knowsAbout": ["PHP", "WordPress", "CodeIgniter", "JavaScript", "Python", "MySQL", "WooCommerce", "REST APIs"],
+    "sameAs": [
+      "https://github.com/vazz01",
+      "https://www.linkedin.com/in/vajeda-multani"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- ===== Loading Screen ===== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__ring"></div>
+    <div class="loader__name">VM</div>
+    <p class="loader__text">Loading portfolio…</p>
+  </div>
+
+  <!-- ===== Scroll Progress Bar ===== -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ===== Custom Cursor (desktop only) ===== -->
+  <div class="cursor" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ===== Mouse Glow ===== -->
+  <div class="mouse-glow" id="mouseGlow" aria-hidden="true"></div>
+
+  <!-- ===== Animated Background Layers ===== -->
+  <div class="bg-layers" aria-hidden="true">
+    <div class="aurora"></div>
+    <div class="grid-bg"></div>
+    <div class="blob blob--1"></div>
+    <div class="blob blob--2"></div>
+    <div class="blob blob--3"></div>
+    <div class="particles" id="particles"></div>
+  </div>
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="nav__logo" aria-label="Vajeda Multani home">
+        <span class="nav__logo-mark">VM</span>
+        <span class="nav__logo-text">Vajeda<span class="grad-text">.</span></span>
+      </a>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Primary">
+        <a href="#home" class="nav__link active">Home</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#skills" class="nav__link">Skills</a>
+        <a href="#experience" class="nav__link">Experience</a>
+        <a href="#education" class="nav__link">Education</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero section" id="home">
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <p class="hero__hi">Hi <span class="wave">👋</span></p>
+          <p class="hero__im">I'm</p>
+          <h1 class="hero__name grad-text">Vajeda Multani</h1>
+          <p class="hero__subtitle">Full Stack PHP &amp; WordPress Developer</p>
+          <p class="hero__typing">
+            <span class="hero__typing-prefix">I'm a</span>
+            <span class="typing" id="typing"></span><span class="typing-cursor">|</span>
+          </p>
+
+          <div class="hero__buttons">
+            <a href="assets/resume/Vajeda-Multani-Resume.pdf" download class="btn btn--primary ripple">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              Download Resume
+            </a>
+            <a href="#contact" class="btn btn--ghost ripple">Contact Me</a>
+          </div>
+
+          <div class="hero__socials">
+            <a href="https://github.com/vazz01" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.39 1.24-3.23-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.92 1.23 3.23 0 4.62-2.81 5.64-5.49 5.94.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/vajeda-multani" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05a3.75 3.75 0 0 1 3.38-1.86c3.61 0 4.28 2.38 4.28 5.47v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+            <a href="mailto:multanivajeda@gmail.com" class="social-btn" aria-label="Email">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" data-parallax>
+          <div class="hero__orb">
+            <div class="hero__ring"></div>
+            <div class="hero__glow"></div>
+            <img src="assets/images/developer.svg" alt="Illustration of Vajeda Multani, a female developer" class="hero__illustration" width="320" height="320" />
+            <!-- Floating tech icons -->
+            <span class="float-icon float-icon--php"   style="--i:0" title="PHP"><img src="assets/icons/php.svg" alt="PHP" width="34" height="34" loading="lazy"></span>
+            <span class="float-icon float-icon--wp"    style="--i:1" title="WordPress"><img src="assets/icons/wordpress.svg" alt="WordPress" width="34" height="34" loading="lazy"></span>
+            <span class="float-icon float-icon--ci"    style="--i:2" title="CodeIgniter"><img src="assets/icons/codeigniter.svg" alt="CodeIgniter" width="34" height="34" loading="lazy"></span>
+            <span class="float-icon float-icon--js"    style="--i:3" title="JavaScript"><img src="assets/icons/javascript.svg" alt="JavaScript" width="34" height="34" loading="lazy"></span>
+            <span class="float-icon float-icon--html"  style="--i:4" title="HTML5"><img src="assets/icons/html5.svg" alt="HTML5" width="34" height="34" loading="lazy"></span>
+            <span class="float-icon float-icon--css"   style="--i:5" title="CSS3"><img src="assets/icons/css3.svg" alt="CSS3" width="34" height="34" loading="lazy"></span>
+            <span class="float-icon float-icon--py"    style="--i:6" title="Python"><img src="assets/icons/python.svg" alt="Python" width="34" height="34" loading="lazy"></span>
+            <span class="float-icon float-icon--git"   style="--i:7" title="Git"><img src="assets/icons/git.svg" alt="Git" width="34" height="34" loading="lazy"></span>
+            <span class="float-icon float-icon--gh"    style="--i:8" title="GitHub"><img src="assets/icons/github.svg" alt="GitHub" width="34" height="34" loading="lazy"></span>
+            <span class="float-icon float-icon--mysql" style="--i:9" title="MySQL"><img src="assets/icons/mysql.svg" alt="MySQL" width="34" height="34" loading="lazy"></span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Scroll to about section">
+        <span class="scroll-hint__mouse"><span></span></span>
+      </a>
+    </section>
+
+    <!-- ===== Section Divider ===== -->
+    <div class="divider" aria-hidden="true"><span></span></div>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">Get to know me</span>
+          <h2 class="section__title">About <span class="grad-text">Me</span></h2>
+        </header>
+
+        <div class="about reveal">
+          <div class="glass-card about__card tilt">
+            <p class="about__text">
+              <strong>Vajeda Multani</strong> is a Full Stack Web Developer with <strong>3+ years</strong> of hands-on
+              experience in web development. She specializes in <strong>PHP, WordPress, CodeIgniter</strong>, and custom
+              web application development, with experience building e-commerce platforms, AI-based applications, and
+              custom WordPress solutions.
+            </p>
+            <p class="about__text">
+              She enjoys solving real-world problems through clean, scalable, and maintainable code while continuously
+              learning new technologies.
+            </p>
+            <div class="about__highlights">
+              <div class="about__highlight"><span class="grad-text">3+</span><small>Years Experience</small></div>
+              <div class="about__highlight"><span class="grad-text">15+</span><small>Projects</small></div>
+              <div class="about__highlight"><span class="grad-text">PHP</span><small>Core Stack</small></div>
+              <div class="about__highlight"><span class="grad-text">WP</span><small>Specialist</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">What I work with</span>
+          <h2 class="section__title">Skills &amp; <span class="grad-text">Expertise</span></h2>
+        </header>
+
+        <div class="skills-grid">
+          <!-- Languages -->
+          <div class="glass-card skill-card reveal tilt">
+            <h3 class="skill-card__title">Languages</h3>
+            <div class="bars">
+              <div class="bar" data-level="90"><span class="bar__label">PHP <em>90%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="85"><span class="bar__label">JavaScript <em>85%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="70"><span class="bar__label">Python <em>70%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="95"><span class="bar__label">HTML5 <em>95%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="90"><span class="bar__label">CSS3 <em>90%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="85"><span class="bar__label">SQL <em>85%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div class="glass-card skill-card reveal tilt">
+            <h3 class="skill-card__title">Frontend</h3>
+            <div class="bars">
+              <div class="bar" data-level="95"><span class="bar__label">HTML5 <em>95%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="90"><span class="bar__label">CSS3 <em>90%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="85"><span class="bar__label">JavaScript <em>85%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="80"><span class="bar__label">Bootstrap <em>80%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="75"><span class="bar__label">Tailwind CSS <em>75%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="95"><span class="bar__label">Responsive Design <em>95%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="glass-card skill-card reveal tilt">
+            <h3 class="skill-card__title">Backend</h3>
+            <div class="bars">
+              <div class="bar" data-level="90"><span class="bar__label">PHP <em>90%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="88"><span class="bar__label">CodeIgniter <em>88%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="82"><span class="bar__label">REST APIs <em>82%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="65"><span class="bar__label">Basic Laravel <em>65%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+            </div>
+          </div>
+
+          <!-- CMS -->
+          <div class="glass-card skill-card reveal tilt">
+            <h3 class="skill-card__title">CMS</h3>
+            <div class="bars">
+              <div class="bar" data-level="92"><span class="bar__label">WordPress <em>92%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="88"><span class="bar__label">WooCommerce <em>88%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="glass-card skill-card reveal tilt">
+            <h3 class="skill-card__title">Database</h3>
+            <div class="bars">
+              <div class="bar" data-level="88"><span class="bar__label">MySQL <em>88%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="72"><span class="bar__label">PostgreSQL <em>72%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="glass-card skill-card reveal tilt">
+            <h3 class="skill-card__title">Tools</h3>
+            <div class="bars">
+              <div class="bar" data-level="90"><span class="bar__label">Git <em>90%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="90"><span class="bar__label">GitHub <em>90%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="92"><span class="bar__label">VS Code <em>92%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="80"><span class="bar__label">Postman <em>80%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+              <div class="bar" data-level="80"><span class="bar__label">Composer <em>80%</em></span><span class="bar__track"><span class="bar__fill"></span></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="badges reveal">
+          <span class="badge">PHP</span><span class="badge">WordPress</span><span class="badge">CodeIgniter</span>
+          <span class="badge">WooCommerce</span><span class="badge">JavaScript</span><span class="badge">Python</span>
+          <span class="badge">HTML5</span><span class="badge">CSS3</span><span class="badge">MySQL</span>
+          <span class="badge">PostgreSQL</span><span class="badge">REST APIs</span><span class="badge">Laravel</span>
+          <span class="badge">Bootstrap</span><span class="badge">Tailwind</span><span class="badge">Git</span>
+          <span class="badge">GitHub</span><span class="badge">Postman</span><span class="badge">Composer</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">Where I've worked</span>
+          <h2 class="section__title">Professional <span class="grad-text">Experience</span></h2>
+        </header>
+
+        <div class="timeline">
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="glass-card timeline__card tilt">
+              <h3 class="timeline__role">Full Stack PHP Developer</h3>
+              <span class="timeline__meta">Web Development</span>
+              <ul class="timeline__list">
+                <li>WordPress Development</li>
+                <li>WooCommerce Customization</li>
+                <li>Custom Theme Development</li>
+                <li>Custom Plugin Development</li>
+                <li>PHP Backend Development</li>
+                <li>REST API Integration</li>
+                <li>Website Maintenance</li>
+                <li>Performance Optimization</li>
+                <li>Bug Fixing</li>
+                <li>Responsive UI Development</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Education ===== -->
+    <section class="section" id="education">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">My background</span>
+          <h2 class="section__title"><span class="grad-text">Education</span></h2>
+        </header>
+
+        <div class="timeline timeline--alt">
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="glass-card timeline__card tilt">
+              <span class="timeline__meta">2019 – 2022</span>
+              <h3 class="timeline__role">Diploma in Computer Engineering</h3>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="glass-card timeline__card tilt">
+              <span class="timeline__meta">2023 – 2026</span>
+              <h3 class="timeline__role">Bachelor of Engineering</h3>
+              <p class="timeline__sub">Computer Science and Engineering</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">Selected work</span>
+          <h2 class="section__title">Featured <span class="grad-text">Projects</span></h2>
+        </header>
+
+        <div class="projects-grid">
+          <!-- E-Commerce -->
+          <article class="project-card reveal tilt">
+            <div class="project-card__media">
+              <img src="assets/images/project-ecommerce.svg" alt="E-Commerce website project" loading="lazy" width="480" height="270" />
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">E-Commerce Website</h3>
+              <p class="project-card__desc">Full-featured online store with shopping cart, admin dashboard, and complete product management.</p>
+              <ul class="project-card__features">
+                <li>Shopping Cart</li><li>Admin Dashboard</li><li>Product Management</li>
+              </ul>
+              <div class="project-card__tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
+              <div class="project-card__actions">
+                <a href="https://github.com/vazz01" target="_blank" rel="noopener" class="btn btn--sm btn--ghost ripple">GitHub</a>
+                <a href="#" class="btn btn--sm btn--primary ripple">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AI Chatbot -->
+          <article class="project-card reveal tilt">
+            <div class="project-card__media">
+              <img src="assets/images/project-chatbot.svg" alt="AI College Chatbot project" loading="lazy" width="480" height="270" />
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">AI College Chatbot</h3>
+              <p class="project-card__desc">AI-powered chatbot that assists students with college information and instant answers.</p>
+              <ul class="project-card__features">
+                <li>Student Assistance</li><li>AI Chat</li><li>College Information</li>
+              </ul>
+              <div class="project-card__tags"><span>Python</span><span>Flask</span></div>
+              <div class="project-card__actions">
+                <a href="https://github.com/vazz01" target="_blank" rel="noopener" class="btn btn--sm btn--ghost ripple">GitHub</a>
+                <a href="#" class="btn btn--sm btn--primary ripple">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- UKMoto -->
+          <article class="project-card reveal tilt">
+            <div class="project-card__media">
+              <img src="assets/images/project-ukmoto.svg" alt="UKMoto WordPress website" loading="lazy" width="480" height="270" />
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">UKMoto</h3>
+              <p class="project-card__desc">WooCommerce store — feature development, bug fixes, and performance optimization.</p>
+              <ul class="project-card__features">
+                <li>Feature Development</li><li>Bug Fixes</li><li>Performance Optimization</li>
+              </ul>
+              <div class="project-card__tags"><span>WordPress</span><span>WooCommerce</span><span>PHP</span></div>
+              <div class="project-card__actions">
+                <a href="https://github.com/vazz01" target="_blank" rel="noopener" class="btn btn--sm btn--ghost ripple">GitHub</a>
+                <a href="https://www.ukmoto.com" target="_blank" rel="noopener" class="btn btn--sm btn--primary ripple">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Style Glow Hub -->
+          <article class="project-card reveal tilt">
+            <div class="project-card__media">
+              <img src="assets/images/project-styleglow.svg" alt="Style Glow Hub WordPress website" loading="lazy" width="480" height="270" />
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Style Glow Hub</h3>
+              <p class="project-card__desc">WordPress website development, customization, and theme improvements.</p>
+              <ul class="project-card__features">
+                <li>Website Development</li><li>Customization</li><li>Theme Improvements</li>
+              </ul>
+              <div class="project-card__tags"><span>WordPress</span><span>PHP</span></div>
+              <div class="project-card__actions">
+                <a href="https://github.com/vazz01" target="_blank" rel="noopener" class="btn btn--sm btn--ghost ripple">GitHub</a>
+                <a href="https://www.styleglowhub.in" target="_blank" rel="noopener" class="btn btn--sm btn--primary ripple">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Custom WordPress -->
+          <article class="project-card reveal tilt">
+            <div class="project-card__media">
+              <img src="assets/images/project-wordpress.svg" alt="Custom WordPress development" loading="lazy" width="480" height="270" />
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Custom WordPress Development</h3>
+              <p class="project-card__desc">Collection of custom themes, plugins, WooCommerce customizations, and business-specific features developed for client projects.</p>
+              <ul class="project-card__features">
+                <li>Custom Themes</li><li>Custom Plugins</li><li>WooCommerce Features</li>
+              </ul>
+              <div class="project-card__tags"><span>WordPress</span><span>PHP</span></div>
+              <div class="project-card__actions">
+                <a href="https://github.com/vazz01" target="_blank" rel="noopener" class="btn btn--sm btn--ghost ripple">GitHub</a>
+                <a href="#" class="btn btn--sm btn--primary ripple">Live Demo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Statistics ===== -->
+    <section class="section stats-section" id="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="glass-card stat reveal">
+            <span class="stat__num" data-target="3" data-suffix="+">0</span>
+            <span class="stat__label">Years Experience</span>
+          </div>
+          <div class="glass-card stat reveal">
+            <span class="stat__num" data-target="15" data-suffix="+">0</span>
+            <span class="stat__label">Projects Completed</span>
+          </div>
+          <div class="glass-card stat reveal">
+            <span class="stat__num" data-target="100" data-suffix="%">0</span>
+            <span class="stat__label">Responsive Designs</span>
+          </div>
+          <div class="glass-card stat reveal">
+            <span class="stat__num" data-target="500" data-suffix="+">0</span>
+            <span class="stat__label">Git Commits</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">Let's talk</span>
+          <h2 class="section__title">Get In <span class="grad-text">Touch</span></h2>
+        </header>
+
+        <div class="contact reveal">
+          <div class="glass-card contact__info tilt">
+            <h3>Contact Information</h3>
+            <p class="contact__lead">Have a project in mind or just want to say hi? Feel free to reach out.</p>
+            <ul class="contact__list">
+              <li>
+                <span class="contact__icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span>
+                <a href="mailto:multanivajeda@gmail.com">multanivajeda@gmail.com</a>
+              </li>
+              <li>
+                <span class="contact__icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.39 1.24-3.23-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.92 1.23 3.23 0 4.62-2.81 5.64-5.49 5.94.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z"/></svg></span>
+                <a href="https://github.com/vazz01" target="_blank" rel="noopener">github.com/vazz01</a>
+              </li>
+              <li>
+                <span class="contact__icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05a3.75 3.75 0 0 1 3.38-1.86c3.61 0 4.28 2.38 4.28 5.47v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></span>
+                <a href="https://www.linkedin.com/in/vajeda-multani" target="_blank" rel="noopener">linkedin.com/in/vajeda-multani</a>
+              </li>
+              <li>
+                <span class="contact__icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                <span>India</span>
+              </li>
+            </ul>
+          </div>
+
+          <form class="glass-card contact__form tilt" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+              <small class="field__error" data-for="name"></small>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              <small class="field__error" data-for="email"></small>
+            </div>
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What is this about?" required />
+              <small class="field__error" data-for="subject"></small>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your message…" required></textarea>
+              <small class="field__error" data-for="message"></small>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block ripple">Send Message</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#home" class="nav__logo"><span class="nav__logo-mark">VM</span><span class="nav__logo-text">Vajeda Multani</span></a>
+        <p class="footer__tag">Full Stack PHP &amp; WordPress Developer</p>
+      </div>
+
+      <nav class="footer__links" aria-label="Footer">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer__social">
+        <h4>Connect</h4>
+        <div class="footer__social-icons">
+          <a href="https://github.com/vazz01" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.39 1.24-3.23-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.92 1.23 3.23 0 4.62-2.81 5.64-5.49 5.94.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z"/></svg></a>
+          <a href="https://www.linkedin.com/in/vajeda-multani" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05a3.75 3.75 0 0 1 3.38-1.86c3.61 0 4.28 2.38 4.28 5.47v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+          <a href="mailto:multanivajeda@gmail.com" class="social-btn" aria-label="Email"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>&copy; <span id="year"></span> Vajeda Multani. All rights reserved.</p>
+      <p>Built with HTML, CSS &amp; JavaScript · Made with <span class="heart">❤️</span></p>
+    </div>
+  </footer>
+
+  <!-- ===== Back to Top ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

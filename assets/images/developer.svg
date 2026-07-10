@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Female developer illustration">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366F1"/>
+      <stop offset="0.55" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="screenG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- soft platform -->
+  <ellipse cx="200" cy="352" rx="120" ry="18" fill="#000" opacity="0.18"/>
+
+  <!-- chair back -->
+  <rect x="150" y="150" width="100" height="150" rx="30" fill="url(#bgG)" opacity="0.9"/>
+
+  <!-- body -->
+  <path d="M140 330c0-45 27-78 60-78s60 33 60 78z" fill="#4338ca"/>
+  <path d="M140 330c0-45 27-78 60-78s60 33 60 78z" fill="url(#bgG)" opacity="0.5"/>
+
+  <!-- neck -->
+  <rect x="188" y="150" width="24" height="40" rx="10" fill="#f2c9a6"/>
+
+  <!-- hair back -->
+  <path d="M150 118c0-33 22-58 50-58s50 25 50 58c0 26-6 44-14 60l-10-8c4-14 6-28 6-44 0-24-14-40-32-40s-32 16-32 40c0 16 2 30 6 44l-10 8c-8-16-14-34-14-60z" fill="#3b2a20"/>
+
+  <!-- face -->
+  <ellipse cx="200" cy="120" rx="38" ry="42" fill="#f5d0b0"/>
+
+  <!-- hair front -->
+  <path d="M162 112c0-30 18-52 38-52s38 22 38 52c-6-18-14-26-24-28-4 10-16 18-30 20-6 2-16 4-22 8z" fill="#4a3628"/>
+  <path d="M238 112c2 24-2 44-6 58l12-10c8-18 12-38 8-62-4 6-8 10-14 14z" fill="#4a3628"/>
+
+  <!-- eyes -->
+  <circle cx="186" cy="118" r="4" fill="#2a2118"/>
+  <circle cx="214" cy="118" r="4" fill="#2a2118"/>
+  <!-- brows -->
+  <path d="M180 108q6-4 12 0" stroke="#3b2a20" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M208 108q6-4 12 0" stroke="#3b2a20" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- smile -->
+  <path d="M190 134q10 9 20 0" stroke="#c96f52" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- arms to keyboard -->
+  <path d="M150 260q-20 25 5 55" stroke="#4338ca" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <path d="M250 260q20 25 -5 55" stroke="#4338ca" stroke-width="20" fill="none" stroke-linecap="round"/>
+
+  <!-- laptop -->
+  <rect x="140" y="300" width="120" height="16" rx="4" fill="#334155"/>
+  <rect x="150" y="238" width="100" height="66" rx="6" fill="url(#screenG)"/>
+  <rect x="158" y="248" width="52" height="6" rx="3" fill="#06B6D4"/>
+  <rect x="158" y="260" width="72" height="6" rx="3" fill="#8B5CF6"/>
+  <rect x="158" y="272" width="40" height="6" rx="3" fill="#6366F1"/>
+  <rect x="158" y="284" width="60" height="6" rx="3" fill="#94a3b8" opacity="0.6"/>
+</svg>
